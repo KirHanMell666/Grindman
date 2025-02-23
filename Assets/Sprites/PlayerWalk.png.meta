@@ -131,9 +131,9 @@ TextureImporter:
       name: PlayerWalk_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 15
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -153,9 +153,9 @@ TextureImporter:
       name: PlayerWalk_1
       rect:
         serializedVersion: 2
-        x: 18
+        x: 16
         y: 0
-        width: 14
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -175,9 +175,9 @@ TextureImporter:
       name: PlayerWalk_2
       rect:
         serializedVersion: 2
-        x: 34
+        x: 32
         y: 0
-        width: 12
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -197,9 +197,9 @@ TextureImporter:
       name: PlayerWalk_3
       rect:
         serializedVersion: 2
-        x: 51
+        x: 48
         y: 0
-        width: 10
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -219,9 +219,9 @@ TextureImporter:
       name: PlayerWalk_4
       rect:
         serializedVersion: 2
-        x: 66
+        x: 64
         y: 0
-        width: 12
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -241,9 +241,9 @@ TextureImporter:
       name: PlayerWalk_5
       rect:
         serializedVersion: 2
-        x: 82
+        x: 80
         y: 0
-        width: 14
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -263,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8f2db1622d9dea94ebb19d8f160ca729
     internalID: 0
     vertices: []
     indices: 
