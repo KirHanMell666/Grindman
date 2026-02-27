@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update () 
     {
         //Jumping
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) 
+        if (Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.wKey.wasPressedThisFrame) 
         {
             if(isGrounded)
             {
@@ -32,11 +33,11 @@ public class PlayerMovement : MonoBehaviour
         moveVelocity = 0;
 
         //Left Right Movement
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) 
+        if (Keyboard.current.leftArrowKey.isPressed || Keyboard.current.aKey.isPressed) 
         {
             moveVelocity = -GetSpeed();
         }
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) 
+        if (Keyboard.current.rightArrowKey.isPressed || Keyboard.current.dKey.isPressed) 
         {
             moveVelocity = GetSpeed();
         }
@@ -46,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
     }
     
     //Check if Grounded
-    private void OnTriggerEnter2D()
+    private void OnTriggerEnter2D(Collider2D other)
     {
         isGrounded = true;
     }
