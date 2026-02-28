@@ -5469,11 +5469,13 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5800661643348717823, guid: e11579f5290da4644ada21019804d051, type: 3}
       propertyPath: m_text
-      value: Armour
+      value: 'Body
+
+        Armour'
       objectReference: {fileID: 0}
     - target: {fileID: 6071071794906611103, guid: e11579f5290da4644ada21019804d051, type: 3}
       propertyPath: m_Name
-      value: Armour
+      value: BodyArmour
       objectReference: {fileID: 0}
     - target: {fileID: 8310430998464192949, guid: e11579f5290da4644ada21019804d051, type: 3}
       propertyPath: m_Pivot.x
@@ -8850,9 +8852,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7715994896843945624}
     m_Modifications:
+    - target: {fileID: 5800661643348717823, guid: e11579f5290da4644ada21019804d051, type: 3}
+      propertyPath: m_text
+      value: Weapon
+      objectReference: {fileID: 0}
     - target: {fileID: 6071071794906611103, guid: e11579f5290da4644ada21019804d051, type: 3}
       propertyPath: m_Name
-      value: Sword
+      value: Weapon
       objectReference: {fileID: 0}
     - target: {fileID: 8310430998464192949, guid: e11579f5290da4644ada21019804d051, type: 3}
       propertyPath: m_Pivot.x
