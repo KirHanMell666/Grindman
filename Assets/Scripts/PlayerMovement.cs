@@ -4,56 +4,25 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float baseSpeed;
-    [SerializeField] private float jump;
-    private Rigidbody2D _rb;
-    
-    private float moveVelocity;
+    [Header("Player Movement")]
+    [SerializeField] private float moveSpeed = 5f;
 
-    //Grounded Vars
-    bool isGrounded = true;
-    
-    private void Start()
+    private Rigidbody2D rb;
+    private Vector2 movement;
+
+    void Start()
     {
-        _rb = GetComponent<Rigidbody2D>();
-    }
-
-    private void Update () 
-    {
-        //Jumping
-        if (Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.wKey.wasPressedThisFrame) 
-        {
-            if(isGrounded)
-            {
-                _rb.linearVelocity = new Vector2 (_rb.linearVelocity.x, jump);
-                isGrounded = false;
-            }
-        }
-
-        moveVelocity = 0;
-
-        //Left Right Movement
-        if (Keyboard.current.leftArrowKey.isPressed || Keyboard.current.aKey.isPressed) 
-        {
-            moveVelocity = -GetSpeed();
-        }
-        if (Keyboard.current.rightArrowKey.isPressed || Keyboard.current.dKey.isPressed) 
-        {
-            moveVelocity = GetSpeed();
-        }
-
-        _rb.linearVelocity = new Vector2 (moveVelocity, _rb.linearVelocity.y);
-
+        rb = GetComponent<Rigidbody2D>();
     }
     
-    //Check if Grounded
-    private void OnTriggerEnter2D(Collider2D other)
+    public void OnMove(InputAction.CallbackContext context)
     {
-        isGrounded = true;
+        movement = context.ReadValue<Vector2>();
     }
 
-    private float GetSpeed()
+    void FixedUpdate()
     {
-        return baseSpeed;
+        Vector2 targetPosition = rb.position + movement * moveSpeed * Time.fixedDeltaTime;
+        rb.MovePosition(targetPosition);
     }
 }

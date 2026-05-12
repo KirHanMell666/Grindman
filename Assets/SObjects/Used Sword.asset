@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d75cd676be8844479de23d42745f776, type: 3}
-  m_Name: Sword
+  m_Name: Used Sword
   m_EditorClassIdentifier: Assembly-CSharp::Sword
-  id: 2
-  itemName: Sword
-  sprite: {fileID: 21300000, guid: 62aeed4fdee82094c99be06f56d288af, type: 3}
+  id: 1
+  itemName: Used Sword
+  sprite: {fileID: 2119701335, guid: b96cafd382b4e69449f99c4357080573, type: 3}
   maxStack: 1
-  description: Just sword
-  requiredLevel: 2
-  requiredStrength: 12
-  requiredDexterity: 12
+  description: This sword seems to be very old
+  requiredLevel: 0
+  requiredStrength: 0
+  requiredDexterity: 0
   requiredIntelligence: 0
-  baseDamage: 15
-  baseRange: 7
+  baseDamage: 10
+  baseRange: 5
